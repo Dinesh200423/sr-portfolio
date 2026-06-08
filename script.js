@@ -49,38 +49,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ====== Animated Counters ======
     const counters = document.querySelectorAll('.counter');
-    let hasCounted = false;
-
-    const counterCallback = (entries) => {
+    
+    const counterCallback = (entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !hasCounted) {
-                hasCounted = true;
-                counters.forEach(counter => {
-                    const target = +counter.getAttribute('data-target');
-                    const duration = 2000; // 2 seconds
-                    const increment = target / (duration / 16); // 60fps
-                    
-                    let current = 0;
-                    const updateCounter = () => {
-                        current += increment;
-                        if (current < target) {
-                            counter.innerText = Math.ceil(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.innerText = target;
-                        }
-                    };
-                    updateCounter();
-                });
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                
+                let current = 0;
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+                
+                observer.unobserve(counter);
             }
         });
     };
 
     const counterObserver = new IntersectionObserver(counterCallback, { threshold: 0.5 });
-    const statsSection = document.querySelector('.stats-grid');
-    if (statsSection) {
-        counterObserver.observe(statsSection);
-    }
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
 
     // ====== Gallery Filtering ======
     const filterBtns = document.querySelectorAll('.filter-btn');
