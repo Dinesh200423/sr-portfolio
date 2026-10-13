@@ -1,433 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SR Creations | Premium Event Photography</title>
-    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SR Creations | Wedding, Event & Portrait Photography</title>
+    <meta
+      name="description"
+      content="SR Creations captures weddings, birthdays, baby showers and bridal portraits through artistic photography and cinematic storytelling. Explore the portfolio and enquire about your date."
+    />
+    <meta name="theme-color" content="#0e0c0d" />
+    <link rel="canonical" href="https://sr-photography-site.vercel.app/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Background Elements -->
-    <div class="bg-glow"></div>
-    <div class="bg-particles" id="particles-container"></div>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SR Creations" />
+    <meta property="og:title" content="SR Creations | Wedding, Event & Portrait Photography" />
+    <meta property="og:description" content="Timeless memories through cinematic storytelling and elegant photography." />
+    <meta property="og:url" content="https://sr-photography-site.vercel.app/" />
+    <meta property="og:image" content="https://sr-photography-site.vercel.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="images/sr logo.webp" alt="SR Creations Logo">
-                <span>SR Creations</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact" class="nav-btn">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Hero image is preloaded so the largest paint is not delayed by JS. -->
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      media="(min-width: 768px)"
+      imagesrcset="/images/optimized/marriage2-1200.avif 1200w, /images/optimized/marriage2-1800.avif 1800w, /images/optimized/marriage2-2400.avif 2400w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      media="(max-width: 767.98px)"
+      imagesrcset="/images/optimized/marriage3-480.avif 480w, /images/optimized/marriage3-800.avif 800w, /images/optimized/marriage3-1200.avif 1200w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-container">
-            <div class="hero-left reveal-left">
-                <span class="label">SR EVENT PHOTOGRAPHY</span>
-                <h1 class="hero-title">Capturing Your Most <span class="text-gradient">Precious Moments</span></h1>
-                <p class="hero-subtitle">Creating timeless memories through cinematic storytelling and elegant photography.</p>
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="dot"></span> Event Photography
-                    </div>
-                    <div class="feature-item">
-                        <span class="dot"></span> Cinematic Storytelling
-                    </div>
-                    <div class="feature-item">
-                        <span class="dot"></span> Elegant Memories
-                    </div>
-                </div>
-                <a href="#contact" class="btn-primary glow-btn">Book Your Session</a>
-            </div>
-            
-            <div class="hero-right reveal-right">
-                <div class="collage-container">
-                    <div class="purple-glow"></div>
-                    <img src="images/marriage3.webp" alt="Wedding" class="collage-img img-1 float-anim-1">
-                    <img src="images/makeup2.JPG.webp" alt="Makeup" class="collage-img img-2 float-anim-2">
-                    <img src="images/birthday function.jpg.webp" alt="Birthday" class="collage-img img-3 float-anim-3">
-                    <img src="images/camera.jpg" alt="Camera" class="collage-img img-hero float-hero">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container split-section">
-            <div class="about-image reveal-left">
-                <div class="image-wrapper glass-card">
-                    <img src="images/babyshower.webp" alt="Baby Shower">
-                    <div class="gold-accent-border"></div>
-                </div>
-            </div>
-            <div class="about-content reveal-right">
-                <h2 class="section-title">About Our Studio</h2>
-                <p class="section-desc">SR Creations specializes in capturing emotions, celebrations, and unforgettable moments through artistic photography and cinematic storytelling. Every frame is carefully crafted to preserve memories that last a lifetime.</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-box">
-                        <h3 class="counter" data-target="50">0</h3><span class="plus">+</span>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3 class="counter" data-target="50">0</h3><span class="plus">+</span>
-                        <p>Events Covered</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3 class="counter" data-target="5">0</h3><span class="plus">+</span>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3 class="counter" data-target="100">0</h3><span class="plus">%</span>
-                        <p>Client Satisfaction</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container text-center reveal-up">
-            <h2 class="section-title">Our Photography Services</h2>
-            <p class="section-desc">Professional photography and cinematic storytelling crafted to preserve your most precious memories.</p>
-            
-            <div class="services-grid-modern">
-                <!-- Wedding -->
-                <div class="service-card-modern">
-                    <div class="service-img-wrapper">
-                        <img src="images/weddingphotography.png" alt="Wedding Photography">
-                        <div class="img-glow"></div>
-                    </div>
-                    <h3>Wedding Photography</h3>
-                    <p>Capturing timeless love stories with elegance and emotion.</p>
-                    <div class="light-sweep"></div>
-                </div>
-                
-                <!-- Event -->
-                <div class="service-card-modern">
-                    <div class="service-img-wrapper">
-                        <img src="images/event.png" alt="Event Photography">
-                        <div class="img-glow"></div>
-                    </div>
-                    <h3>Event Photography</h3>
-                    <p>Documenting celebrations and unforgettable moments.</p>
-                    <div class="light-sweep"></div>
-                </div>
-
-                <!-- Baby Shower -->
-                <div class="service-card-modern">
-                    <div class="service-img-wrapper">
-                        <img src="images/babyshowerai.png" alt="Baby Shower Photography">
-                        <div class="img-glow"></div>
-                    </div>
-                    <h3>Baby Shower Photography</h3>
-                    <p>Preserving joyful memories before a beautiful new beginning.</p>
-                    <div class="light-sweep"></div>
-                </div>
-
-                <!-- Birthday -->
-                <div class="service-card-modern">
-                    <div class="service-img-wrapper">
-                        <img src="images/birthdayai.png" alt="Birthday Photography">
-                        <div class="img-glow"></div>
-                    </div>
-                    <h3>Birthday Photography</h3>
-                    <p>Capturing happiness, laughter, and special milestones.</p>
-                    <div class="light-sweep"></div>
-                </div>
-
-                <!-- Bridal Portraits -->
-                <div class="service-card-modern">
-                    <div class="service-img-wrapper">
-                        <img src="images/bridepotrait.png" alt="Bridal Portraits">
-                        <div class="img-glow"></div>
-                    </div>
-                    <h3>Bridal Portraits</h3>
-                    <p>Elegant portraits highlighting beauty, grace, and tradition.</p>
-                    <div class="light-sweep"></div>
-                </div>
-
-                <!-- Cinematic Video -->
-                <div class="service-card-modern">
-                    <div class="service-img-wrapper">
-                        <img src="images/cinematicvideo.png" alt="Cinematic Videography">
-                        <div class="img-glow"></div>
-                    </div>
-                    <h3>Cinematic Videography</h3>
-                    <p>Creating cinematic films that tell your unique story.</p>
-                    <div class="light-sweep"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Works / Gallery Section -->
-    <section class="gallery-section" id="gallery">
-        <div class="container text-center reveal-up">
-            <h2 class="section-title">Signature Events</h2>
-            <p class="section-desc" style="max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-muted);">A collection of unforgettable celebrations, timeless emotions, and beautifully captured memories.</p>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="wedding">Weddings</button>
-                <button class="filter-btn" data-filter="birthday">Birthdays</button>
-                <button class="filter-btn" data-filter="babyshower">Baby Shower</button>
-                <button class="filter-btn" data-filter="makeup">Bridal Portraits</button>
-            </div>
-
-            <div class="masonry-gallery">
-                <!-- Wedding -->
-                <div class="gallery-item wedding">
-                    <img src="images/marriage.jpg.webp" alt="Wedding 1">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item wedding">
-                    <img src="images/marriage2.webp" alt="Wedding 2">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item wedding">
-                    <img src="images/marriage3.webp" alt="Wedding 3">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item wedding">
-                    <img src="images/marriage4.webp" alt="Wedding 4">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                
-                <!-- Baby Shower -->
-                <div class="gallery-item babyshower">
-                    <img src="images/babyshower.webp" alt="Baby Shower">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                
-                <!-- Birthday -->
-                <div class="gallery-item birthday">
-                    <img src="images/bday.webp" alt="Birthday 1">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item birthday">
-                    <img src="images/bday2.webp" alt="Birthday 2">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item birthday">
-                    <img src="images/bday3.webp" alt="Birthday 3">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item birthday">
-                    <img src="images/birthday function.jpg.webp" alt="Birthday 4">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                
-                <!-- Bridal Portraits / Makeup -->
-                <div class="gallery-item makeup">
-                    <img src="images/makeup1.JPG.webp" alt="Makeup 1">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item makeup">
-                    <img src="images/makeup2.JPG.webp" alt="Makeup 2">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item makeup">
-                    <img src="images/makeup3.JPG.webp" alt="Makeup 3">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-                <div class="gallery-item makeup">
-                    <img src="images/makeup4.webp" alt="Makeup 4">
-                    <div class="item-overlay"><span>View</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container text-center reveal-up">
-            <h2 class="section-title">Client Stories</h2>
-            <div class="carousel-container">
-                <div class="carousel-track" id="testimonial-track">
-                    <div class="testimonial-card glass-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="quote">"Professional team, amazing creativity, and stunning photographs. Highly recommended."</p>
-                        <h4>- Priya & Rahul</h4>
-                    </div>
-                    <div class="testimonial-card glass-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="quote">"They captured every emotion beautifully. Memories for a lifetime. Absolutely perfect!"</p>
-                        <h4>- Sarah Jenkins</h4>
-                    </div>
-                    <div class="testimonial-card glass-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
-                        <p class="quote">"The cinematic storytelling and elegant touch they added to our event was incredible."</p>
-                        <h4>- Amit & Neha</h4>
-                    </div>
-                </div>
-                <div class="carousel-controls">
-                    <button id="prev-btn" class="nav-arrow">&larr;</button>
-                    <button id="next-btn" class="nav-arrow">&rarr;</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact luxury-contact" id="contact">
-        <div class="contact-bg-glow"></div>
-        <div class="container split-section reveal-up">
-            <div class="contact-info luxury-left">
-                <div class="floating-camera-wrapper">
-                    <div class="purple-glow"></div>
-                    <img src="images/camera.jpg" alt="DSLR Camera" class="floating-camera-img">
-                </div>
-                <div class="brand-badge glass-card">
-                    <img src="images/sr logo.webp" alt="SR Creations Logo">
-                    <div>
-                        <h3>SR Creations</h3>
-                        <p>Luxury Event Photography</p>
-                    </div>
-                </div>
-                <div class="premium-stats-grid">
-                    <div class="premium-stat glass-card">
-                        <h4 class="counter" data-target="50">0</h4><span>+</span>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="premium-stat glass-card">
-                        <h4 class="counter" data-target="50">0</h4><span>+</span>
-                        <p>Events Covered</p>
-                    </div>
-                    <div class="premium-stat glass-card">
-                        <h4 class="counter" data-target="5">0</h4><span>+</span>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="premium-stat glass-card">
-                        <h4 class="counter" data-target="100">0</h4><span>%</span>
-                        <p>Satisfaction</p>
-                    </div>
-                </div>
-                <div class="trust-badges">
-                    <span class="trust-badge">✨ Fast Response</span>
-                    <span class="trust-badge">💎 Premium Quality</span>
-                    <span class="trust-badge">🎥 Cinematic Storytelling</span>
-                    <span class="trust-badge">👥 Professional Team</span>
-                </div>
-            </div>
-            <div class="contact-form-wrapper glass-card luxury-form">
-                <h2 class="form-title">Consultation Request</h2>
-                <p class="form-subtitle">Let us tell your unique story. Secure your date with our premium team.</p>
-                <form id="booking-form">
-                    <div class="form-row">
-                        <div class="input-group premium-input">
-                            <input type="text" placeholder="Name" required>
-                        </div>
-                        <div class="input-group premium-input">
-                            <input type="tel" placeholder="Phone Number" required>
-                        </div>
-                    </div>
-                    <div class="input-group premium-input">
-                        <input type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group premium-input">
-                            <select required>
-                                <option value="" disabled selected>Event Type</option>
-                                <option value="wedding">Wedding</option>
-                                <option value="birthday">Birthday</option>
-                                <option value="babyshower">Baby Shower</option>
-                                <option value="bridal">Bridal Portrait</option>
-                                <option value="other">Other Event</option>
-                            </select>
-                        </div>
-                        <div class="input-group premium-input">
-                            <input type="date" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="input-group premium-input">
-                            <input type="text" placeholder="Event Location" required>
-                        </div>
-                        <div class="input-group premium-input">
-                            <select required>
-                                <option value="" disabled selected>Budget Range</option>
-                                <option value="standard">₹50,000 - ₹1,00,000</option>
-                                <option value="premium">₹1,00,000 - ₹2,00,000</option>
-                                <option value="luxury">₹2,00,000+</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input-group premium-input">
-                        <textarea placeholder="Tell us about your dream event..." rows="3" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary glow-btn w-100 luxury-btn">Reserve Your Date</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <img src="images/sr logo.webp" alt="SR Creations Logo">
-                <p>Preserving timeless memories with artistic vision and elegant storytelling.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-services">
-                <h4>Services</h4>
-                <ul>
-                    <li>Wedding Photography</li>
-                    <li>Event Coverage</li>
-                    <li>Baby Showers</li>
-                    <li>Bridal Portraits</li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/suriya_rlove?igsh=OWhuNXdhcThybm5z" target="_blank">IG</a>
-                    <a href="#">FB</a>
-                    <a href="#">WA</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 SR Creations. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-    </div>
-
-</body>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SR Creations",
+        "description": "Wedding, event, birthday, baby shower and bridal portrait photography with cinematic videography.",
+        "url": "https://sr-photography-site.vercel.app/",
+        "image": "https://sr-photography-site.vercel.app/og-image.jpg",
+        "logo": "https://sr-photography-site.vercel.app/images/optimized/logo-320.webp",
+        "sameAs": ["https://www.instagram.com/suriya_rlove"]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding:2rem;font-family:sans-serif;color:#f4efe6;background:#0e0c0d">
+        SR Creations — wedding &amp; event photography. Please enable JavaScript to view the portfolio, or reach us on
+        <a style="color:#e6d2a8" href="https://www.instagram.com/suriya_rlove">Instagram</a>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
